@@ -121,13 +121,13 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #cdd6f4;
+        color: #313244;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #eba0ac;
+    background-color: #f38ba8;
     color: #1e1e2e;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -153,7 +153,7 @@ button:hover {
 }
 
 #temperature.critical {
-    color: #eb4d4b;
+    color: #f38ba8;
 }
 
 #custom-arch {
@@ -166,10 +166,6 @@ button:hover {
 
 #custom-arch:hover {
     background-color: #9399b2;
-}
-
-#tray {
-    background-color: #2980b9;
 }
 
 #tray > .passive {
