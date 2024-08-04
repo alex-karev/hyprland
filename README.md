@@ -24,7 +24,7 @@ A hyprland+waybar+wofi+dunst config inspired by my custom dwm build: [dwm](https
 1. Install dependencies:
 
 ```
-sudo pacman -S hyprland hyprpaper waybar dunst brightnessctl pamixer slurp swappy grim kitty
+sudo pacman -S hyprland hyprpaper hyprlock waybar dunst brightnessctl pamixer slurp swappy grim kitty
 yay -S catppuccin-cursors-mocha catppuccin-gtk-theme-mocha
 ```
 

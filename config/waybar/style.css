@@ -1,3 +1,5 @@
+@import "themes/catppuccin-mocha.css";
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FantasqueSansM Nerd Font;
@@ -9,8 +11,8 @@ window > box {
 }
 
 window#waybar {
-    background-color: #1e1e2e;
-    color: #cdd6f4;
+    background-color: @bg; 
+    color: @fg;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -34,38 +36,38 @@ button:hover {
 }
 
 #workspaces {
-    background-color: #313244;
+    background-color: @bgAlt;
     border-radius: 1rem;
 }
 
 #workspaces button {
-    color: #cdd6f4;
+    color: @fg;
     background-color: transparent;
     border-radius: 1rem;
     margin: 0 3px;
     padding: 0 8px;
 }
 #workspaces button:hover {
-    color: #cdd6f4;
-    background-color: #9399b2;
+    color: @fg;
+    background-color: @bgHover;
 }
 
 #workspaces button.empty {
-    color: #45475A;
+    color: @fgFade;
 }
 
 #workspaces button:not(.hosting-monitor) {
-    color: #7f849c;
+    color: @fgHalfFade;
 }
 
 #workspaces button.hosting-monitor.active {
-    background-color: #cdd6f4;
-    color: #1e1e2e;
+    background-color: @fg;
+    color: @bg;
 }
 
 #workspaces button.urgent {
-    background-color: #eba0ac;
-    color: #1e1e2e;
+    background-color: @red;
+    color: @bg;
 }
 
 #clock,
@@ -84,9 +86,9 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    color: #cdd6f4;
+    color: @fg;
     border-radius: 1rem;
-    background-color: #313244;
+    background-color: @bgAlt;
     margin: 0 3px;
     padding: 5px 8px;
 }
@@ -107,28 +109,28 @@ button:hover {
 }
 
 #clock.date {
-    color: #cba6f7;
+    color: @violet; 
 }
 
 #clock.time {
-    color: #89b4fa;
+    color: @blue;
 }
 
 #battery {
-    color: #f9e2af;
+    color: @yellow;
 }
 
 
 @keyframes blink {
     to {
-        background-color: #cdd6f4;
-        color: #313244;
+        background-color: @fg;
+        color: @bgAlt;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f38ba8;
-    color: #1e1e2e;
+    background-color: @red;
+    color: @bg;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -137,35 +139,35 @@ button:hover {
 }
 
 #cpu {
-    color: #f38ba8;
+    color: @red;
 }
 
 #memory {
-    color: #94e2d5; 
+    color: @cyan; 
 }
 
 #network {
-    color: #a6e3a1;
+    color: @green;
 }
 
 #temperature {
-    color: #fab387;
+    color: @orange;
 }
 
 #temperature.critical {
-    color: #f38ba8;
+    color: @red;
 }
 
 #custom-arch {
-    background-color: #313244;
-    color: #89b4fa;
+    background-color: @bgAlt;
+    color: @blue;
     border-radius: 1rem;
     margin: 0 0 0 3px;
     padding: 5px 8px;
 }
 
 #custom-arch:hover {
-    background-color: #9399b2;
+    background-color: @bgHover;
 }
 
 #tray > .passive {
@@ -174,57 +176,16 @@ button:hover {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @red;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: @bgAlt;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: @fg;
+    color: @bgAlt;
 }
 
 #scratchpad {
@@ -233,25 +194,4 @@ button:hover {
 
 #scratchpad.empty {
 	background-color: transparent;
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
 }
