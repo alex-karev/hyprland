@@ -19,13 +19,14 @@ A hyprland+waybar+wofi+dunst config inspired by my custom dwm build: [dwm](https
 * Multimonitor support.
 * Scripts for changing volume and brightness using dunst.
 * Screenshot pipeline via slurp+grim+swappy.
+* Hyprlock and hyprshade integration.
 
 ## Installation
 1. Install dependencies:
 
 ```
 sudo pacman -S hyprland hyprpaper hyprlock xdg-desktop-portal-hyprland waybar dunst brightnessctl pamixer slurp swappy grim kitty copyq wl-clipboard
-yay -S catppuccin-cursors-mocha catppuccin-gtk-theme-mocha
+yay -S hyprshade catppuccin-cursors-mocha catppuccin-gtk-theme-mocha
 ```
 
 2. Clone this repo:
