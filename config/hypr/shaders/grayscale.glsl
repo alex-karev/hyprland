@@ -1,4 +1,6 @@
-// https://github.com/hyprwm/Hyprland/issues/1140
+// Source: https://github.com/hyprwm/Hyprland/issues/1140
+// Thanks to: https://github.com/ulziibuyan
+
 //
 // Example grayscale shader.
 // 
